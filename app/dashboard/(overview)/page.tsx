@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton } from '@/app/ui/skeletons';
+import { RevenueChartSkeleton, CardsSkeleton } from '@/app/ui/skeletons';
 
 import { fetchCardData } from '@/app/lib/data';
 
@@ -28,9 +28,7 @@ export default async function Page() {
         <Suspense fallback={<RevenueChartSkeleton />}>
           <RevenueChart />
         </Suspense>
-        <Suspense fallback={<LatestInvoicesSkeleton />}>
-          <LatestInvoices />
-        </Suspense>
+        <LatestInvoices />
       </div>
     </main>
   );

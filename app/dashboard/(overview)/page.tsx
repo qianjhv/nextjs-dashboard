@@ -1,7 +1,5 @@
 import { Suspense } from 'react';
 
-import { fetchCardData } from '@/app/lib/data';
-
 import { RevenueChartSkeleton, CardsSkeleton, LatestInvoicesSkeleton } from '@/app/ui/skeletons';
 import CardWrapper from '@/app/ui/dashboard/cards';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
@@ -12,8 +10,6 @@ import { lusitana } from '@/app/ui/fonts';
 export const experimental_ppr = true;
 
 export default async function Page() {
-
-  const { totalPaidInvoices, totalPendingInvoices, numberOfInvoices, numberOfCustomers  } = await fetchCardData();
 
   return (
     <main>

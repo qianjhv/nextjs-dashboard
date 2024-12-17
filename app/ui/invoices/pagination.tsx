@@ -61,17 +61,10 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   );
 }
 
-function PaginationNumber({
-  page,
-  href,
-  isActive,
-  position,
-}: {
-  page: number | string;
-  href: string;
-  position?: 'first' | 'last' | 'middle' | 'single';
-  isActive: boolean;
-}) {
+function PaginationNumber(
+  { page, href, isActive, position, }: 
+  { page: number | string; href: string; position?: 'first' | 'last' | 'middle' | 'single'; isActive: boolean; }
+) {
   const className = clsx(
     'flex h-10 w-10 items-center justify-center text-sm border',
     {
